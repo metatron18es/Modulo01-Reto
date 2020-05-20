@@ -160,37 +160,47 @@ body {
           transition: width .3s;
           cursor: pointer;
         }
-          @media screen and (min-width: 1051px) and (max-width: 1280px) {
-            .common-list-item {
-              height: calc(calc(calc(100vw - 50px) / 4) * 0.57);
-            }
-              .common-list-item:nth-child(-n+4) {
-                width: 25%;
-                height: calc(calc(calc(100vw - 50px) / 4) * 0.57);
-              }
-              .common-list-item:nth-child(n+5) {
-                width: 50%;
-                height: calc(calc(calc(calc(100vw - 50px) / 4) * 0.57) * 2);
-              }
-          }
-          @media screen and (min-width: 801px) and (max-width: 1050px) { 
-            .common-list-item {
-              width: calc(100% / 3);
-              height: calc(calc(calc(100vw - 50px) / 3) * 0.57);
-            }
-          }
-          @media screen and (max-width: 800px) { 
-            .common-list-item {
-              width:100%;
-              height: calc(calc(100vw - 50px) * 0.57);
-            }
-          }
           .common-list-item:hover {
             width: calc(calc(100% / 6) + 100px);
           }
           .common-list-item:hover:not(:hover) {
             width: calc(calc(100% - 100px) / 6);
           }
+          @media screen and (min-width: 1051px) and (max-width: 1280px) {
+            .common-list-item,
+            .common-list-item:hover,
+            .common-list-item:hover:not(:hover) {
+              height: calc(calc(calc(100vw - 50px) / 4) * 0.57);
+            }
+              .common-list-item:nth-child(-n+4),
+              .common-list-item:nth-child(-n+4):hover,
+              .common-list-item:nth-child(-n+4):not(:hover) {
+                width: 25%;
+                height: calc(calc(calc(100vw - 50px) / 4) * 0.57);
+              }
+              .common-list-item:nth-child(n+5),
+              .common-list-item:nth-child(n+5):hover,
+              .common-list-item:nth-child(n+5):not(:hover) {
+                width: 50%;
+                height: calc(calc(calc(calc(100vw - 50px) / 4) * 0.57) * 2);
+              }
+            }
+            @media screen and (min-width: 801px) and (max-width: 1050px) { 
+              .common-list-item,
+              .common-list-item:hover,
+              .common-list-item:hover:not(:hover) {
+                width: calc(100% / 3);
+                height: calc(calc(calc(100vw - 50px) / 3) * 0.57);
+              }
+            }
+            @media screen and (max-width: 800px) { 
+              .common-list-item,
+              .common-list-item:hover,
+              .common-list-item:hover:not(:hover) {
+                width:100%;
+                height: calc(calc(100vw - 50px) * 0.57);
+              }
+            }
           .popular-list .common-list-item {
             width: calc(calc(100vw - 50px) / 5);
             height: calc(calc(calc(100vw - 50px) / 5) * 0.8);
